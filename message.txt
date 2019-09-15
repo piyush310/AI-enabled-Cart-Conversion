@@ -1,0 +1,5 @@
+Dear ${PERSON_NAME},
+	Thanks for shopping with us, you still have some item left in your cart, please checkout.
+
+Happy Shopping,
+Dell

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/open-iconic-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css')}}">
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/aos.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ionicons.min.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-datepicker.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.timepicker.css')}}">
+
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+  </head>
+  <body class="goto-here">
+		<div class="py-1 bg-black">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+		    			<div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">+0512-996565623</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">dell_support@dell.com</span>
+					    </div>
+					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+						    <span class="text">3-5 Business days delivery &amp; Free Returns</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="{{ url_for('index')}}">DELL</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="{{ url_for('index')}}" class="nav-link">Home</a></li>
+	          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="{{ url_for('shop')}}">Shop</a>
+                <a class="dropdown-item" href="{{ url_for('product_single')}}">Single Product</a>
+                <a class="dropdown-item" href="{{ url_for('cart')}}">Cart</a>
+                <a class="dropdown-item" href="{{ url_for('checkout')}}">Checkout</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="{{ url_for('about')}}" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="{{ url_for('blog')}}" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="{{ url_for('contact')}}" class="nav-link">Contact</a></li>
+	           <li class="nav-item"><a href="{{ url_for('login')}}" class="nav-link">Log</a></li>
+	          <li class="nav-item cta cta-colored"><a href="{{ url_for('cart')}}" class="nav-link"><span class="icon-shopping_cart"></span>[{{cart_value}}]</a></li>
+
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section id="home-section" class="hero">
+		  <div class="home-slider owl-carousel">
+	      <div class="slider-item js-fullheight">
+	      	<div class="overlay"></div>
+	        <div class="container-fluid p-0">
+	          <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+	          	<img class="one-third order-md-last img-fluid" src="{{ url_for('static',filename='images/bg_1.png')}}" alt="">
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">#New Arrival</span>
+		          		<div class="horizontal">
+				            <h1 class="mb-4 mt-3">Laptop Collection 2019</h1>
+				            <p class="mb-4">Visuals appear every bit as lifelike as the world around you. Experience richer, more vibrant color and details enabled by Dell Color Profiles.</p>
+				            
+				            <p><a href="#" class="btn-custom">Discover Now</a></p>
+				          </div>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+
+	      <div class="slider-item js-fullheight">
+	      	<div class="overlay"></div>
+	        <div class="container-fluid p-0">
+	          <div class="row d-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+	          	<img class="one-third order-md-last img-fluid" src="{{ url_for('static',filename='images/bg_2.png')}}" alt="">
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">#New Arrival</span>
+		          		<div class="horizontal">
+				            <h1 class="mb-4 mt-3">New Laptop Collection</h1>
+				            <p class="mb-4">SmartByte Wireless channels maximum bandwidth to your videos or music for a seamless, stutter-free experience.</p>
+				            
+				            <p><a href="#" class="btn-custom">Discover Now</a></p>
+				          </div>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div class="container">
+				<div class="row no-gutters ftco-services">
+          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services p-4 py-md-5">
+              <div class="icon d-flex justify-content-center align-items-center mb-4">
+            		<span class="flaticon-bag"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Free Shipping</h3>
+                <p>Free shipping on orders of parts / accessories / Laptops for purchases over ₹250 for the rest of the world With Commencal. Terms & Conditions. Get Deal.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services p-4 py-md-5">
+              <div class="icon d-flex justify-content-center align-items-center mb-4">
+            		<span class="flaticon-customer-service"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Support Customer</h3>
+                <p>Enter a Service Request Number, Dell Service Tag, Dell EMC Product ID, or Dispatch Number (DPS) to check Dispatch or Repair Status.</p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services p-4 py-md-5">
+              <div class="icon d-flex justify-content-center align-items-center mb-4">
+            		<span class="flaticon-payment-security"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Secure Payments</h3>
+                <p>Save up to ₹ 29,611* on Inspiron 7000 series and upgrade to 3 Years Limited Hardware Warranty worth ₹5620 at just ₹1999. Call 1800-425-4002.</p>
+              </div>
+            </div>      
+          </div>
+        </div>
+			</div>
+		</section>
+
+    <section class="ftco-section bg-light">
+    	<div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">New Laptop Arrival</h2>
+            <p>Thin, lightweight laptop with premium, colourful design and impressive performance for professionals seeking style and mobility.</p>
+          </div>
+        </div>   		
+    	</div>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+    				<div class="product d-flex flex-column">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{ url_for('static',filename='images/product-1.png')}}" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3">
+    						<div class="d-flex">
+    							<div class="cat">
+		    						<span>Laptop</span>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right mb-0">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<h3><a href="#">Dell Inspiron 3570</a></h3>
+    						<div class="pricing">
+	    						<p class="price"><span>₹35555.00</span></p>
+	    					</div>
+	    					<p class="bottom-area d-flex px-3">
+    							<a href="{{url_for('index1')}}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+    				<div class="product d-flex flex-column">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{ url_for('static',filename='images/product-2.png')}}" alt="Colorlib Template">
+    						<span class="status">5% Off</span>
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3">
+    						<div class="d-flex">
+    							<div class="cat">
+		    						<span>Laptop</span>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right mb-0">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<h3><a href="#">Dell Inspiron 3576</a></h3>
+  							<div class="pricing">
+	    						<p class="price"><span class="mr-2 price-dc">₹65520.00</span><span class="price-sale">₹62320.00</span></p>
+	    					</div>
+	    					<p class="bottom-area d-flex px-3">
+    							<a href="{{url_for('index1')}}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{ url_for('static',filename='images/product-3.png')}}" alt="Colorlib Template">
+	    					<div class="overlay"></div>
+	    				</a>
+    					<div class="text py-3 pb-4 px-3">
+    						<div class="d-flex">
+    							<div class="cat">
+		    						<span>Laptop</span>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right mb-0">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<h3><a href="#">Dell Inspiron Core i5 8th Gen 8250</a></h3>
+  							<div class="pricing">
+	    						<p class="price"><span>₹68880.00</span></p>
+	    					</div>
+	    					<p class="bottom-area d-flex px-3">
+    							<a href="{{url_for('index1')}}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{ url_for('static',filename='images/product-4.png')}}" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3">
+    						<div class="d-flex">
+    							<div class="cat">
+		    						<span>Laptop</span>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right mb-0">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<h3><a href="#">Dell Inspiron 5570</a></h3>
+  							<div class="pricing">
+	    						<p class="price"><span>₹54990.00</span></p>
+	    					</div>
+	    					<p class="bottom-area d-flex px-3">
+    							<a href="{{url_for('index1')}}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+    				<div class="product d-flex flex-column">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{ url_for('static',filename='images/product-5.png')}}" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3">
+    						<div class="d-flex">
+    							<div class="cat">
+		    						<span>Laptop</span>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right mb-0">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<h3><a href="#">Dell Inspiron 6549</a></h3>
+    						<div class="pricing">
+	    						<p class="price"><span>₹45250.00</span></p>
+	    					</div>
+	    					<p class="bottom-area d-flex px-3">
+    							<a href="{{url_for('index1')}}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+    				<div class="product d-flex flex-column">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{ url_for('static',filename='images/product-6.png')}}" alt="Colorlib Template">
+    						<span class="status">5% Off</span>
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3">
+    						<div class="d-flex">
+    							<div class="cat">
+		    						<span>Laptop</span>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right mb-0">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<h3><a href="#">Dell Inspiron 3576</a></h3>
+  							<div class="pricing">
+	    						<p class="price"><span class="mr-2 price-dc">₹45300.00</span><span class="price-sale">₹42300.00</span></p>
+	    					</div>
+	    					<p class="bottom-area d-flex px-3">
+    							<a href="{{url_for('index1')}}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{ url_for('static',filename='images/product-7.png')}}" alt="Colorlib Template">
+	    					<div class="overlay"></div>
+	    				</a>
+    					<div class="text py-3 pb-4 px-3">
+    						<div class="d-flex">
+    							<div class="cat">
+		    						<span>Laptop</span>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right mb-0">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<h3><a href="#">Dell Inspiron 5580</a></h3>
+  							<div class="pricing">
+	    						<p class="price"><span>₹63020.00</span></p>
+	    					</div>
+	    					<p class="bottom-area d-flex px-3">
+    							<a href="{{url_for('index1')}}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{ url_for('static',filename='images/product-8.png')}}" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3">
+    						<div class="d-flex">
+    							<div class="cat">
+		    						<span>Laptop</span>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right mb-0">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<h3><a href="#">Dell Inspiron 4570</a></h3>
+  							<div class="pricing">
+	    						<p class="price"><span>₹42570.00</span></p>
+	    					</div>
+	    					<p class="bottom-area d-flex px-3">
+    							<a href="{{url_for('index1')}}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+
+    <section class="ftco-section ftco-choose ftco-no-pb ftco-no-pt">
+    	<div class="container">
+				<div class="row no-gutters">
+					<div class="col-lg-4">
+						<div class="choose-wrap divider-one img p-5 d-flex align-items-end" style="background-image: url({{ url_for('static', filename='images/choose-1.jpg')}});">
+
+    					<div class="text text-center text-white px-2">
+								<span class="subheading">Laptop</span>
+    						<h2>Laptop Collection</h2>
+    						<p>Experience security and performance with Windows 10 Home in S mode. Up to 6% back in rewards.</p>
+    						<p><a href="#" class="btn btn-black px-3 py-2">Shop now</a></p>
+    					</div>
+    				</div>
+					</div>
+					<div class="col-lg-8">
+    				<div class="row no-gutters choose-wrap divider-two align-items-stretch">
+    					<div class="col-md-12">
+	    					<div class="choose-wrap full-wrap img align-self-stretch d-flex align-item-center justify-content-end" style="background-image: url({{ url_for('static', filename='images/choose-2.jpg')}});">
+	    						<div class="col-md-7 d-flex align-items-center">
+	    							<div class="text text-white px-5">
+	    								<span class="subheading">Student Collection</span>
+			    						<h2>Laptop Collection</h2>
+			    						<p>A great value for those looking for the speed, simplicity, and security of Chrome in a portable 11” laptop. Includes an Intel® Celeron® processor, 4GB of memory and 16GB Flash storage.</p>
+			    						<p><a href="#" class="btn btn-black px-3 py-2">Shop now</a></p>
+			    					</div>
+	    						</div>
+	    					</div>
+	    				</div>
+    					<div class="col-md-12">
+    						<div class="row no-gutters">
+    							<div class="col-md-6">
+		    						<div class="choose-wrap wrap img align-self-stretch bg-light d-flex align-items-center">
+		    							<div class="text text-center px-5">
+		    								<span class="subheading">Summer Sale</span>
+				    						<h2>Extra 10% Off</h2>
+				    						<p>Time to get ready for school. Back to School deals are here. Buy select PCs & Monitors, get up to a ₹65200 Promo Visa® Prepaid Card.Plus, apply now and get 6 months financing on purchases $50000.</p>
+				    						<p><a href="#" class="btn btn-black px-3 py-2">Shop now</a></p>
+				    					</div>
+		    						</div>
+	    						</div>
+	    						<div class="col-md-6">
+		    						<div class="choose-wrap wrap img align-self-stretch d-flex align-items-center" style="background-image: url({{ url_for('static', filename='images/choose-3.jpg')}});">
+		    							<div class="text text-center text-white px-5">
+		    								<span class="subheading">Laptop</span>
+				    						<h2>Best Sellers</h2>
+				    						<p>All the memory and storage you need in a space saving design that is perfect in any living room or office. Up to 6% back in rewards.</p>
+				    						<p><a href="#" class="btn btn-black px-3 py-2">Shop now</a></p>
+				    					</div>
+		    						</div>
+	    						</div>
+	    					</div>
+    					</div>
+    				</div>
+    			</div>
+  			</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-deal bg-primary">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-6">
+    				<img src="{{ url_for('static',filename='images/prod-1.png')}}" class="img-fluid" alt="">
+    			</div>
+    			<div class="col-md-6">
+    				<div class="heading-section heading-section-white">
+    					<span class="subheading">Deal of the month</span>
+	            <h2 class="mb-3">Deal of the month</h2>
+	          </div>
+    				<!-- <div id="timer" class="d-flex mb-4">
+						  <div class="time" id="days"></div>
+						  <div class="time pl-4" id="hours"></div>
+						  <div class="time pl-4" id="minutes"></div>
+						  <div class="time pl-4" id="seconds"></div>
+						</div> -->
+						<div class="text-deal">
+							<h2><a href="#">Latitude 7400 Business Laptop</a></h2>
+							<p class="price"><span class="mr-2 price-dc">₹56550.00</span><span class="price-sale">₹49990.00</span></p>
+							<ul class="thumb-deal d-flex mt-4">
+								<li class="img" style="background-image: url({{ url_for('static', filename='images/product-6.png')}});"></li>
+								<li class="img" style="background-image: url({{ url_for('static', filename='images/product-1.png')}});"></li>
+								<li class="img" style="background-image: url({{ url_for('static', filename='images/product-3.png')}});"></li>
+							</ul>
+						</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row">
+        	<div class="col-lg-5">
+        		<div class="services-flow">
+        			<div class="services-2 p-4 d-flex ftco-animate">
+        				<div class="icon">
+        					<span class="flaticon-bag"></span>
+        				</div>
+        				<div class="text">
+	        				<h3>Free Shipping</h3>
+	        				<p class="mb-0">The ultimate way to shop – from free shipping to expert help and so much more on a huge selection of award-winning products.</p>
+        				</div>
+        			</div>
+        			<div class="services-2 p-4 d-flex ftco-animate">
+        				<div class="icon">
+        					<span class="flaticon-heart-box"></span>
+        				</div>
+        				<div class="text">
+	        				<h3>Valuable Gifts</h3>
+	        				<p class="mb-0">Join for free to get up to 6% back in rewards* to use on thousands of Dell and other top brand products. Plus, get free expedited delivery*, exclusive offers and sale access.</p>
+	        			</div>
+        			</div>
+        			<div class="services-2 p-4 d-flex ftco-animate">
+        				<div class="icon">
+        					<span class="flaticon-payment-security"></span>
+        				</div>
+        				<div class="text">
+	        				<h3>All Day Support</h3>
+	        				<p class="mb-0">It normally takes 2-3 business days for your payment to be reflected on your DPA account or DBC account.  However, in some instances, your available credit may not reflect your payment for up to 10 days.</p>
+	        			</div>
+        			</div>
+        			<div class="services-2 p-4 d-flex ftco-animate">
+        				<div class="icon">
+        					<span class="flaticon-customer-service"></span>
+        				</div>
+        				<div class="text">
+	        				<h3>All Day Support</h3>
+	        				<p class="mb-0">Send your question(s) to us via email. Our Customer Service team will respond as soon as possible.</p>
+	        			</div>
+        			</div>
+        		</div>
+        	</div>
+          <div class="col-lg-7">
+          	<div class="heading-section ftco-animate mb-5">
+	            <h2 class="mb-4">Our satisfied customer says</h2>
+	            <p></p>
+	          </div>
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap">
+                  <div class="user-img mb-4" style="background-image: url({{ url_for('static', filename='images/person_1.jpg')}})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4 pl-4 line">I have bought so many different brands of laptops over the years and Dell is clearly the best brand. Every laptop I have bought from Dell has met my expectations. Dell makes good quality laptops. I just bought the Inspiron 15 5000 laptop and it's AMAZING! It's FAST and I LOVE it! The keyboard lights up too. Thank you Dell! I will never buy any other brand of computer except Dell.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Marketing Manager</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap">
+                  <div class="user-img mb-4" style="background-image: url({{ url_for('static', filename='images/person_2.jpg')}})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4 pl-4 line">I just had my brand new Dell XPS 15 go into a loop while trying to reset my laptop. I called in and asked for some help. The lady that helped me was MarieKate, and she did an amazing job. Walked me step by step for an hour, to find out how to fix it. She was amazing and I hope that the rest of the Customer Support is just like her. She tried multiple things to help get my laptop back up and running. She needs to be recognized!!!</p>
+                    <p class="name">Jacob of Elk</p>
+                    <span class="position">Interface Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap">
+                  <div class="user-img mb-4" style="background-image: url({{ url_for('static', filename='images/person_3.jpg')}})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4 pl-4 line">I called Dell Concierge Support on Friday regarding my Dell Inspiron's damage to its right corner due to a fall from my sofa. They were exceedingly helpful, courteous and knowledgeable. I received a FedEx label and Dell box to ship my laptop for repair on Monday morning. I wrapped it carefully with the bubble wrap they provided and sent it to Dell for repair on Monday afternoon at about 4:00 PM. I was so pleasantly surprised at receiving my laptop back this morning via FedEx overnight service. My laptop looks and feels brand new! THANK YOU DELL Customer Service!!!</p>
+                    <p class="name">Berny of Flemington</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap">
+                  <div class="user-img mb-4" style="background-image: url({{ url_for('static', filename='images/person_1.jpg')}})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4 pl-4 line">I went into Best Buy looking for a machine with an AMD Ryzen processor and dual band WiFi card. I found this Inspiron 5575 with 8GB of RAM, 1TB HDD, Dual band wifi, touch screen, camera, and HD graphics card all for around $560. After having this product for a couple of days, I am very impressed. It is lightweight, has a lighted keyboard, great battery life, and a decent Radeon graphics card. My only complaint was that I would have liked to have a DVD-RW drive - but I could always get an external drive. This thing is fast too, very responsive and runs cool - I couldn't be happier with my purchase. I highly recommend this machine to anyone looking for a great affordable laptop! :)</p>
+                    <p class="name">Derek of Nampa</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap">
+                  <div class="user-img mb-4" style="background-image: url({{ url_for('static', filename='images/person_1.jpg')}})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-4 pl-4 line">Same design flaws as the 9550, same build excellence also. I had to recently replace my Dell XPS 15 9550. Since all the other performance laptop manufacturers seem to be aiming at the spoilt teenager market, I got the latest iteration of the Dell XPS 15, the 9570. Reasons why I had to replace the computer: Inability to replace or charge existing batteries - the DC power jack port mechanically failed after three years, which appears to have shorted the power supply diodes and making a battery replacement moot.</p>
+                    <p class="name">Ed of**</p>
+                    <span class="position">System Analyst</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-gallery">
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-md-8 heading-section text-center mb-4 ftco-animate">
+            <h2 class="mb-4">Follow Us On Instagram</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+          </div>
+    		</div>
+    	</div>
+    	<div class="container-fluid px-0">
+    		<div class="row no-gutters">
+					<div class="col-md-4 col-lg-2 ftco-animate">
+						<a href="{{ url_for('static',filename='images/gallery-1.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ url_for('static', filename='images/gallery-1.jpg')}});">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-instagram"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-4 col-lg-2 ftco-animate">
+						<a href="{{ url_for('static',filename='images/gallery-2.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ url_for('static', filename='images/gallery-2.jpg')}});">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-instagram"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-4 col-lg-2 ftco-animate">
+						<a href="{{ url_for('static',filename='images/gallery-3.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ url_for('static', filename='images/gallery-3.jpg')}});">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-instagram"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-4 col-lg-2 ftco-animate">
+						<a href="{{ url_for('static',filename='images/gallery-4.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ url_for('static', filename='images/gallery-4.jpg')}});">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-instagram"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-4 col-lg-2 ftco-animate">
+						<a href="{{ url_for('static',filename='images/gallery-5.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ url_for('static', filename='images/gallery-5.jpg')}});">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-instagram"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-4 col-lg-2 ftco-animate">
+						<a href="{{ url_for('static',filename='images/gallery-6.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ url_for('static', filename='images/gallery-6.jpg')}});">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-instagram"></span>
+    					</div>
+						</a>
+					</div>
+        </div>
+    	</div>
+    </section>
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+      	<div class="row">
+      		<div class="mouse">
+						<a href="#" class="mouse-icon">
+							<div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+						</a>
+					</div>
+      	</div>
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">DELL</h2>
+              <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p> -->
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Menu</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Shop</a></li>
+                <li><a href="#" class="py-2 d-block">About</a></li>
+                <li><a href="#" class="py-2 d-block">Journal</a></li>
+                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Help</h2>
+              <div class="d-flex">
+	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+	                <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
+	                <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
+	                <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
+	                <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+	              </ul>
+	              <ul class="list-unstyled">
+	                <li><a href="#" class="py-2 d-block">FAQs</a></li>
+	                <li><a href="#" class="py-2 d-block">Contact</a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	             <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">2HIG 6/2 (Annx Housing Board Colony) · </span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">0674-274-2677</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">dell_support@dell.co</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/popper.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/jquery.easing.1.3.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/jquery.waypoints.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/aos.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/jquery.animateNumber.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/bootstrap-datepicker.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/scrollax.min.js')}}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{{ url_for('static',filename='js/google-map.js')}}"></script>
+  <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,8 @@
+Dear ${PERSON_NAME},
+	Sorry for the inconvenience.
+	Due to some banking issues we couldn't complete your transaction.
+	The problem has been settled now. Please make the payment through link given below :
+	https://razorpay.com/payment-links/
+Thanks for shopping with us!!!
+With Regards
+Dell
